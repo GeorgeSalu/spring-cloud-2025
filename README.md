@@ -4,24 +4,24 @@ Você começará com uma base sólida de conceitos: o que são microsserviços, 
 
 Durante essa jornada, você aprenderá a utilizar ferramentas e frameworks que fazem parte do dia a dia de desenvolvedores profissionais, como:
 
-    Spring Cloud Configuration, para centralizar e versionar configurações
+- Spring Cloud Configuration, para centralizar e versionar configurações
 
-    Spring Boot Actuator, para monitorar os serviços
+- Spring Boot Actuator, para monitorar os serviços
 
-    Feign, para comunicação entre microsserviços de forma simples
+- Feign, para comunicação entre microsserviços de forma simples
 
-    Eureka, para service discovery e service registry
+- Eureka, para service discovery e service registry
 
-    Spring Cloud LoadBalancer, para balanceamento de carga moderno
+- Spring Cloud LoadBalancer, para balanceamento de carga moderno
 
-    Spring Cloud Gateway, para centralizar o tráfego com rotas flexíveis
+- Spring Cloud Gateway, para centralizar o tráfego com rotas flexíveis
 
-    Resilience4J, para implementar circuit breaker e tornar os serviços mais resistentes
+- Resilience4J, para implementar circuit breaker e tornar os serviços mais resistentes
 
-    Swagger OpenAPI, para documentar de forma clara e acessível
+- Swagger OpenAPI, para documentar de forma clara e acessível
 
-    Zipkin com Docker, para rastreamento de chamadas distribuídas
+- Zipkin com Docker, para rastreamento de chamadas distribuídas
 
-    GitHub Actions, para entrega contínua automatizada
+- GitHub Actions, para entrega contínua automatizada
 
-    Kubernetes, para orquestrar os serviços e preparar seu projeto para produção real
+- Kubernetes, para orquestrar os serviços e preparar seu projeto para produção real
