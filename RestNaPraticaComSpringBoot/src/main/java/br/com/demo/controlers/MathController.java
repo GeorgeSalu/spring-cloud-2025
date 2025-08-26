@@ -44,6 +44,13 @@ public class MathController {
         return (convertToDouble(numberOne) * convertToDouble(numberTwo)) / 2;
     }
 
+    @RequestMapping("/squareRoot/{number}")
+    public Double squareRoot(@PathVariable("number") String number) {
+
+        if (!isNumeric(number)) throw new UnsupportedMathOperationException("Please set a numeric value");
+        return Math.sqrt(convertToDouble(number));
+    }
+
     private Double convertToDouble(String strNumber) throws IllegalArgumentException {
         if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please set a numeric value");
         String number = strNumber.replace(",", ".");
