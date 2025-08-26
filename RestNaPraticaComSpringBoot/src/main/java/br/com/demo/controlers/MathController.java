@@ -8,12 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/math")
 public class MathController {
-    
+
     @RequestMapping("/sum/{numberOne}/{numberTwo}")
     public Double sum(@PathVariable("numberOne") String numberOne,@PathVariable("numberTwo") String numberTwo) {
 
         if (!isNumeric(numberOne) || !isNumeric(numberOne)) throw new UnsupportedMathOperationException("Please set a numeric value");
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
+    }
+
+    @RequestMapping("/subtraction/{numberOne}/{numberTwo}")
+    public Double subtraction(@PathVariable("numberOne") String numberOne,@PathVariable("numberTwo") String numberTwo) {
+
+        if (!isNumeric(numberOne) || !isNumeric(numberOne)) throw new UnsupportedMathOperationException("Please set a numeric value");
+        return convertToDouble(numberOne) - convertToDouble(numberTwo);
     }
 
     private Double convertToDouble(String strNumber) throws IllegalArgumentException {
