@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MathController {
 
     // http://localhost:8080/math/sum/3/5
-    @RequestMapping("/sum/{number1}/{number2}")
-    public Double sum(@PathVariable("number1") String number1,@PathVariable("number2") String number2) {
+    @RequestMapping("/sum/{numberOne}/{numberTwo}")
+    public Double sum(@PathVariable("numberOne") String numberOne,@PathVariable("numberTwo") String numberTwo) {
         return 1D;
     }
 
