@@ -30,6 +30,13 @@ public class MathController {
         return convertToDouble(numberOne) * convertToDouble(numberTwo);
     }
 
+    @RequestMapping("/division/{numberOne}/{numberTwo}")
+    public Double division(@PathVariable("numberOne") String numberOne,@PathVariable("numberTwo") String numberTwo) {
+
+        if (!isNumeric(numberOne) || !isNumeric(numberOne)) throw new UnsupportedMathOperationException("Please set a numeric value");
+        return convertToDouble(numberOne) / convertToDouble(numberTwo);
+    }
+
     private Double convertToDouble(String strNumber) throws IllegalArgumentException {
         if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please set a numeric value");
         String number = strNumber.replace(",", ".");
