@@ -16,8 +16,10 @@ public class MathController {
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
     }
 
-    private Double convertToDouble(String numberOne) {
-        return 1D;
+    private Double convertToDouble(String strNumber) throws IllegalArgumentException {
+        if(strNumber == null || strNumber.isEmpty()) throw new IllegalArgumentException();
+        String number = strNumber.replace(",", ".");
+        return Double.parseDouble(number);
     }
 
     private boolean isNumeric(String strNumber) {
