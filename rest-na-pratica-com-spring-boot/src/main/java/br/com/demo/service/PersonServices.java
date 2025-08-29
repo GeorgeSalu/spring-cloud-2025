@@ -33,7 +33,16 @@ public class PersonServices {
 
     public Person update(Person person) {
         logger.info("update one person");
-        return person;
+
+        Person entity = personRepository.findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("no records found for this"));
+
+        entity.setFirstName(person.getFirstName());
+        entity.setLastName(person.getLastName());
+        entity.setAddress(person.getAddress());
+        entity.setGender(person.getGender());
+
+        return personRepository.save(entity);
     }
 
     public void delete(String id) {
