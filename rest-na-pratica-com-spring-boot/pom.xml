@@ -10,9 +10,9 @@
 	</parent>
 
     <groupId>demo</groupId>
-	<artifactId>RestNaPraticaComSpringBoot</artifactId>
+	<artifactId>rest-na-pratica-com-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RestNaPraticaComSpringBoot</name>
+	<name>rest-na-pratica-com-spring-boot</name>
 	<description>Demo project for Spring Boot</description>
 
     <properties>
