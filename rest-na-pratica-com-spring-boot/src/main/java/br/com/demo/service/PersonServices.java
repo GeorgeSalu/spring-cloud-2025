@@ -54,16 +54,6 @@ public class PersonServices {
         personRepository.delete(entity);
     }
 
-    private Person mockPerson(int i) {
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Person " + i);
-        person.setLastName("LastName " + i);
-        person.setAddress("Uberlandia");
-        person.setGender("Male");
-        return person;
-    }
-
     public Person findById(Long id){
         logger.info("finding one person");
 
