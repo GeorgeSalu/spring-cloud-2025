@@ -1,5 +1,6 @@
 package br.com.demo.service;
 
+import br.com.demo.exception.ResourceNotFoundException;
 import br.com.demo.model.Person;
 import br.com.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,16 +49,11 @@ public class PersonServices {
         return person;
     }
 
-    public Person findById(String id){
+    public Person findById(Long id){
         logger.info("finding one person");
 
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Leandro");
-        person.setLastName("Rodrigo");
-        person.setAddress("Uberlandia");
-        person.setGender("Male");
-        return person;
+        return personRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("no records found for this"));
     }
 
 }
