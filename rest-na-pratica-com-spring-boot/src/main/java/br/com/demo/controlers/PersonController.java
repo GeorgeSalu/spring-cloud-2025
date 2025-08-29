@@ -36,7 +36,7 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public void delete(@PathVariable("id") String id){
+    public void delete(@PathVariable("id") Long id){
         services.delete(id);
     }
 

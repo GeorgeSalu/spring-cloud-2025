@@ -45,8 +45,13 @@ public class PersonServices {
         return personRepository.save(entity);
     }
 
-    public void delete(String id) {
+    public void delete(Long id) {
         logger.info("delete one person");
+
+        Person entity = personRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("no records found for this"));
+
+        personRepository.delete(entity);
     }
 
     private Person mockPerson(int i) {
