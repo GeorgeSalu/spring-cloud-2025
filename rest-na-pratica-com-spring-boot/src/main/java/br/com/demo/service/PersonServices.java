@@ -24,7 +24,6 @@ public class PersonServices {
 
     public Person create(Person person) {
         logger.info("create one person");
-
         return personRepository.save(person);
     }
 
@@ -38,7 +37,6 @@ public class PersonServices {
         entity.setLastName(person.getLastName());
         entity.setAddress(person.getAddress());
         entity.setGender(person.getGender());
-
         return personRepository.save(entity);
     }
 
@@ -47,7 +45,6 @@ public class PersonServices {
 
         Person entity = personRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("no records found for this"));
-
         personRepository.delete(entity);
     }
 
