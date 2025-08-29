@@ -1,4 +1,4 @@
-package br.com.demo;
+package br.com.demo.service;
 
 import br.com.demo.model.Person;
 import org.springframework.stereotype.Service;
