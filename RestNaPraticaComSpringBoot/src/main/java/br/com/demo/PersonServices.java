@@ -24,7 +24,13 @@ public class PersonServices {
     }
 
     private Person mockPerson(int i) {
-        return new Person();
+        Person person = new Person();
+        person.setId(counter.incrementAndGet());
+        person.setFirstName("Person " + i);
+        person.setLastName("LastName " + i);
+        person.setAddress("Uberlandia");
+        person.setGender("Male");
+        return person;
     }
 
     public Person findById(String id){
