@@ -1,6 +1,8 @@
 package br.com.demo.service;
 
 import br.com.demo.model.Person;
+import br.com.demo.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,13 +16,12 @@ public class PersonServices {
     private final AtomicLong counter = new AtomicLong();
     private final Logger logger = Logger.getLogger(PersonServices.class.getName());
 
+    @Autowired
+    private PersonRepository personRepository;
+
     public List<Person> findAll() {
-        List<Person> persons = new ArrayList<Person>();
-        for (int i = 0; i < 8; i++) {
-            Person person = mockPerson(i);
-            persons.add(person);
-        }
-        return persons;
+        logger.info("finding all person");
+        return personRepository.findAll();
     }
 
     public Person create(Person person) {
