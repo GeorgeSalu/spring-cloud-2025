@@ -1,11 +1,11 @@
 package br.com.demo.request.converters;
 
-import br.com.demo.exception.UnsupportedMathOperationException;
+import br.com.demo.exception.ResourceNotFoundException;
 
 public class NumberConverter {
 
     public static Double convertToDouble(String strNumber) throws IllegalArgumentException {
-        if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please set a numeric value");
+        if(strNumber == null || strNumber.isEmpty()) throw new ResourceNotFoundException("Please set a numeric value");
         String number = strNumber.replace(",", ".");
         return Double.parseDouble(number);
     }
