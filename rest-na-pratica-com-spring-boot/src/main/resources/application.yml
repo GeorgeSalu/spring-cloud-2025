@@ -15,4 +15,5 @@ spring:
     open-in-view: false
 logging:
   level:
-    br.com.demo.repository: debug
+    root: warn
+  # br.com.demo.repository: debug
