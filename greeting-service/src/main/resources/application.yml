@@ -9,6 +9,9 @@ management:
       exposure:
         include:
           - '*'
+  endpoint:
+    health:
+      show-details: always
 greeting-service:
   greeting: "Ola"
   defaultValue: "Mundo"
