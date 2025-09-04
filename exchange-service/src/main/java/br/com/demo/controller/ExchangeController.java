@@ -31,7 +31,7 @@ public class ExchangeController {
 
         BigDecimal conversionFactor = exchange.getConversionFactor();
         BigDecimal convertedValue = conversionFactor.multiply(amount);
-        exchange.setConversionFactor(convertedValue);
+        exchange.setConvertedValue(convertedValue);
         exchange.setEnvironment("PORT "+informationService.retrieveServerPort());
 
         return exchange;
