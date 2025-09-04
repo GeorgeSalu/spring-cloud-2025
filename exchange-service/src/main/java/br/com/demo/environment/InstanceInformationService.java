@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class InstanceInformantionService implements ApplicationListener<WebServerInitializedEvent> {
+public class InstanceInformationService implements ApplicationListener<WebServerInitializedEvent> {
 
     private String port;
 

@@ -1,6 +1,6 @@
 package br.com.demo.controller;
 
-import br.com.demo.environment.InstanceInformantionService;
+import br.com.demo.environment.InstanceInformationService;
 import br.com.demo.model.Exchange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -16,11 +16,11 @@ import java.math.BigDecimal;
 public class ExchangeController {
 
     @Autowired
-    private InstanceInformantionService informantionService;
+    private InstanceInformationService informationService;
 
     @GetMapping(value = "/{amount}/{from}/{to}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Exchange getExchange(@PathVariable("amount") BigDecimal amount,@PathVariable("from") String from,@PathVariable("to") String to) {
-        return new Exchange(1L, from, to, BigDecimal.ONE, BigDecimal.ONE, "PORT "+informantionService.retrieveServerPort());
+        return new Exchange(1L, from, to, BigDecimal.ONE, BigDecimal.ONE, "PORT "+informationService.retrieveServerPort());
     }
 
 }
