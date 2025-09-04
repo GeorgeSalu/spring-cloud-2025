@@ -3,6 +3,7 @@ package br.com.demo.controller;
 import br.com.demo.dto.Exchange;
 import br.com.demo.enviroment.InstanceInformationService;
 import br.com.demo.model.Book;
+import br.com.demo.proxy.ExchangeProxy;
 import br.com.demo.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -24,19 +25,17 @@ public class BookController {
     @Autowired
     private BookRepository repository;
 
+    @Autowired
+    private ExchangeProxy exchangeProxy;
+
     @GetMapping(value = "/{id}/{currency}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Book findBook(@PathVariable("id") Long id, @PathVariable("currency") String currency) {
         String port = informationService.retrieveServerPort();
 
         var book = repository.findById(id).orElseThrow();
 
-        HashMap<String,String> params = new HashMap<>();
-        params.put("amount", book.getPrice().toString());
-        params.put("from", "USD");
-        params.put("to", currency);
 
-        var response = new RestTemplate().getForEntity("http://localhost:8000/exchange-service/{amount}/{from}/{to}", Exchange.class, params);
-        Exchange exchange = response.getBody();
+        Exchange exchange = exchangeProxy.getExchange(book.getPrice(), "USD", currency);
 
         book.setEnvironment(port);
         book.setPrice(exchange.getConvertedValue());
