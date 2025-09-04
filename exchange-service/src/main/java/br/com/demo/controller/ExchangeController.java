@@ -20,12 +20,12 @@ public class ExchangeController {
     private InstanceInformationService informationService;
 
     @Autowired
-    private ExchangeRepository exchangeRepository;
+    private ExchangeRepository repository;
 
     @GetMapping(value = "/{amount}/{from}/{to}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Exchange getExchange(@PathVariable("amount") BigDecimal amount,@PathVariable("from") String from,@PathVariable("to") String to) {
 
-        Exchange exchange = exchangeRepository.findByFromAndTo(from, to);
+        Exchange exchange = repository.findByFromAndTo(from, to);
 
         if (exchange == null) throw new RuntimeException("Currency Unsupported");
 
