@@ -9,9 +9,9 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Component
-public class LogginFilter implements GlobalFilter {
+public class LoggingFilter implements GlobalFilter {
 
-    private Logger logger = LoggerFactory.getLogger(LogginFilter.class);
+    private Logger logger = LoggerFactory.getLogger(LoggingFilter.class);
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
