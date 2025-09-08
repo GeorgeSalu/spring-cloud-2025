@@ -17,5 +17,4 @@ Durante essa jornada, você aprenderá a utilizar ferramentas e frameworks que f
 - Resilience4J, para implementar circuit breaker e tornar os serviços mais resistentes
 - Swagger OpenAPI, para documentar de forma clara e acessível
 - Zipkin com Docker, para rastreamento de chamadas distribuídas
-- GitHub Actions, para entrega contínua automatizada
 - Kubernetes, para orquestrar os serviços e preparar seu projeto para produção real
