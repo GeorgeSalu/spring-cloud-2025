@@ -2,6 +2,8 @@
 
 Desenvolva microsserviços com segurança e confiança
 
+Microsserviços modernos com Java, utilizando Spring Boot 3.5, Spring Cloud, Docker e Kubernetes
+
 Você começará com uma base sólida de conceitos: o que são microsserviços, por que eles existem e como funcionam. Logo em seguida, passará à prática construindo um primeiro microsserviço e, gradualmente, avançará para um sistema distribuído mais robusto.
 
 Durante essa jornada, você aprenderá a utilizar ferramentas e frameworks que fazem parte do dia a dia de desenvolvedores profissionais, como:
