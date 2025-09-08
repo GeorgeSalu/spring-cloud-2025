@@ -1,5 +1,6 @@
 package br.com.demo.controller;
 
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
@@ -20,7 +21,8 @@ public class FooBarController {
     // @Retry(name = "foo-bar")
     // @Retry(name = "foo-bar", fallbackMethod = "fallbackMethod")
     // @CircuitBreaker(name = "default", fallbackMethod = "fallbackMethod")
-    @RateLimiter(name = "default")
+    // @RateLimiter(name = "default")
+    @Bulkhead(name = "default")
     public String fooBar() {
 
         logger.info("resquest to foo-bar is received");
