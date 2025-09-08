@@ -22,7 +22,7 @@ public class OpenAPIConfiguration {
 
     @Bean
     @Lazy(value = false)
-    public List<GroupedOpenApi> apis(SwaggerUiConfigParameters condif, RouteDefinitionLocator locator) {
+    public List<GroupedOpenApi> apis(SwaggerUiConfigParameters config, RouteDefinitionLocator locator) {
 
         List<RouteDefinition> definitions = locator.getRouteDefinitions().collectList().block();
         List<GroupedOpenApi> groups = new ArrayList<>();
@@ -33,7 +33,7 @@ public class OpenAPIConfiguration {
                     .forEach(
                             routeDefinition -> {
                                 String name = routeDefinition.getId();
-                                condif.addGroup(name);
+                                config.addGroup(name);
                                 groups.add(GroupedOpenApi.builder()
                                                 .group(name)
                                                 .pathsToMatch("/"+name+"/**")
