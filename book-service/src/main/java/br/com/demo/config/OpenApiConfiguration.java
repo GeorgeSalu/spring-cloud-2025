@@ -8,7 +8,11 @@ import io.swagger.v3.oas.models.info.License;
 import org.springframework.context.annotation.Bean;
 
 @OpenAPIDefinition(
-        info = @Info(title = "Book Microservice Api", version = "V1", description = "Documentation of book microservice api")
+        info = @Info(
+                title = "Book Microservice Api",
+                version = "V1",
+                description = "Documentation of book microservice api"
+        )
 )
 public class OpenApiConfiguration {
 
