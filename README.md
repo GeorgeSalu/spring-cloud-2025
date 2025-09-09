@@ -1,6 +1,6 @@
 ## Spring Cloud 2025.0.0
 
-Desenvolva microsserviços com segurança e confiança
+Desenvolva microsserviços com segurança e confiança, microsserviços modernos, seguros e escaláveis com as tecnologias mais usadas no mercado
 
 Microsserviços modernos com Java, utilizando Spring Boot 3.5, Spring Cloud, Docker e Kubernetes
 
