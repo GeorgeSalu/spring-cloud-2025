@@ -4,9 +4,9 @@ services:
     ports:
       - 8761:8761
     networks:
-      - 
+      - gjava-network
 
 networks:
-  erudio-network:
-    name: erudio-network
+  gjava-network:
+    name: gjava-network
     driver: bridge
