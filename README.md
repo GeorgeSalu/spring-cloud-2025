@@ -6,6 +6,16 @@ Microsserviços modernos com Java, utilizando Spring Boot 3.5, Spring Cloud, Doc
 
 Você começará com uma base sólida de conceitos: o que são microsserviços, por que eles existem e como funcionam. Logo em seguida, passará à prática construindo um primeiro microsserviço e, gradualmente, avançará para um sistema distribuído mais robusto.
 
+O ecossistema Spring evoluiu muito nos últimos anos. Projetos antes amplamente utilizados, como Hystrix, Ribbon, Zuul 1 e Archaius, foram descontinuados ou entraram em modo de manutenção. totalmente adaptado às recomendações atuais da própria equipe do Spring Cloud:
+
+    Hystrix → Resilience4J
+
+    Ribbon → Spring Cloud LoadBalancer
+
+    Zuul 1 → Spring Cloud Gateway
+
+    Archaius → Spring Cloud Config
+
 Durante essa jornada, você aprenderá a utilizar ferramentas e frameworks que fazem parte do dia a dia de desenvolvedores profissionais, como:
 
 - **Spring Cloud Configuration**, para centralizar e versionar configurações
