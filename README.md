@@ -8,13 +8,10 @@ Você começará com uma base sólida de conceitos: o que são microsserviços, 
 
 O ecossistema Spring evoluiu muito nos últimos anos. Projetos antes amplamente utilizados, como Hystrix, Ribbon, Zuul 1 e Archaius, foram descontinuados ou entraram em modo de manutenção. totalmente adaptado às recomendações atuais da própria equipe do Spring Cloud:
 
-    Hystrix → Resilience4J
-
-    Ribbon → Spring Cloud LoadBalancer
-
-    Zuul 1 → Spring Cloud Gateway
-
-    Archaius → Spring Cloud Config
+- Hystrix → Resilience4J
+- Ribbon → Spring Cloud LoadBalancer
+- Zuul 1 → Spring Cloud Gateway
+- Archaius → Spring Cloud Config
 
 Durante essa jornada, você aprenderá a utilizar ferramentas e frameworks que fazem parte do dia a dia de desenvolvedores profissionais, como:
 
