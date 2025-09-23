@@ -1,4 +1,4 @@
-## Spring Cloud 2025.0.0 | Microservices com Spring Cloud
+## Spring Cloud 2025.0.0 | Microservices com Feign Spring Cloud Netflix Eureka API Gateway Circuit Breaker Resilience4j Config Server LoadBalancer
 
 Desenvolva microsserviços com segurança e confiança, microsserviços modernos, seguros e escaláveis com as tecnologias mais usadas no mercado
 
