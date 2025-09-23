@@ -1,6 +1,6 @@
 services:
   naming-server:
-    image: lenadrocgsi/naming-server:0.0.1-SNAPSHOT
+    image: gjava/naming-server:0.0.1-SNAPSHOT
     ports:
       - 8761:8761
     networks:
