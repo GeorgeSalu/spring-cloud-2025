@@ -20,7 +20,7 @@ services:
     ports:
       - 8765:8765
     restart: always
-    dependens_on:
+    depends_on:
       - zipkin-server
     networks:
       - gjava-network
