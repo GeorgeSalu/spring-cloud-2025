@@ -15,6 +15,16 @@ services:
     networks:
       - gjava-network
 
+  api-gateway:
+    image: gjava/api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - 8765:8765
+    restart: always
+    dependens_on:
+      - zipkin-server
+    networks:
+      - gjava-network
+
 
 networks:
   gjava-network:
