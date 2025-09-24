@@ -1,4 +1,12 @@
 services:
+  zipkin-server:
+    image: openzipkin/zipkin:3.5.1
+    ports:
+      - 9411:9411
+    restart: always
+    networks:
+      - gjava-network
+
   naming-server:
     image: gjava/naming-server:0.0.1-SNAPSHOT
     ports:
@@ -7,13 +15,6 @@ services:
     networks:
       - gjava-network
 
-  zipkin-server:
-    image: openzipkin/zipkin:3.5.1
-    ports:
-      - 9411:9411
-    restart: always
-    networks:
-      - gjava-network
 
 networks:
   gjava-network:
