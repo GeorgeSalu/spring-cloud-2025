@@ -24,6 +24,9 @@ services:
     restart: always
     depends_on:
       - zipkin-server
+    enviroment:
+      SPRING_ZIPKIN_BASEURL: http://localhost:9411
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://localhost:8761/eureka
     networks:
       - gjava-network
 
